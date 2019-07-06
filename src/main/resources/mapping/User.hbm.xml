@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.moviereviews.models.User">
+		<id name="email" type="org.hibernate.type.StringType" column="EMAIL"></id>
+		<property name="username" type="org.hibernate.type.StringType" column="USER_NAME"></property>
+		<property name="password" type="org.hibernate.type.StringType" column="PASS_WORD"></property>
+		<property name="reputation" column="REPUTATION" not-null="true"></property>
+		<property name="privilege" column="PRIVILEGE" not-null="true"></property>
+	</class>
+</hibernate-mapping>
