@@ -12,4 +12,8 @@
 		<!-- enables MVC annotations -->
 		<mvc:annotation-driven></mvc:annotation-driven>
 		
+		<mvc:cors>
+    		<mvc:mapping path="/**" />
+		</mvc:cors>
+		
 </beans>
