@@ -18,7 +18,7 @@ import com.moviereviews.models.Review;
 import com.moviereviews.services.ReviewService;
 
 @Controller
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "http://moviereviewsdojj.s3-website.us-east-2.amazonaws.com")
 @RequestMapping("/review")
 public class ReviewController {
 	
@@ -26,6 +26,7 @@ public class ReviewController {
 	private ReviewService rs;
 	
 	//Mapping for Get by Id
+	@CrossOrigin(origins = "http://moviereviewsdojj.s3-website.us-east-2.amazonaws.com")
 	@GetMapping("/{id}")
 	@ResponseBody
 	public List<Review> getReviewsByMovieId(@PathVariable("id") int mId) {

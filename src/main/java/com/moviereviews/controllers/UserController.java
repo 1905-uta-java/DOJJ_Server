@@ -16,7 +16,7 @@ import com.moviereviews.models.User;
 import com.moviereviews.services.UserService;
 
 @Controller
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "http://moviereviewsdojj.s3-website.us-east-2.amazonaws.com")
 @RequestMapping("/users")
 public class UserController {
 	
