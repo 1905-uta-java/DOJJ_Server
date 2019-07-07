@@ -1,16 +1,15 @@
 package com.moviereviews.services;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.moviereviews.dao.UserDao;
 import com.moviereviews.dao.UserDaoImp;
 import com.moviereviews.models.User;
 
 @Service
 public class UserService {
 	
-	@Autowired
-	UserDaoImp ud;
+	UserDao ud = new UserDaoImp();
 	
 	//Get the User's information from their email
 	public User getByEmail(String email) {

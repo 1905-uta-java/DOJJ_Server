@@ -2,17 +2,16 @@ package com.moviereviews.services;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.moviereviews.dao.ReviewDao;
 import com.moviereviews.dao.ReviewDaoImp;
 import com.moviereviews.models.Review;
 
 @Service
 public class ReviewService {
 	
-	@Autowired
-	ReviewDaoImp rd;
+	ReviewDao rd = new ReviewDaoImp();
 	
 	//Get all the reviews by the movie Id
 	public List<Review> getByMovieId(int id) {

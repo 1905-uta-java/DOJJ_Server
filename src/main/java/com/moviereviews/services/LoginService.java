@@ -1,16 +1,15 @@
 package com.moviereviews.services;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.moviereviews.dao.UserDao;
 import com.moviereviews.dao.UserDaoImp;
 import com.moviereviews.models.User;
 
 @Service
 public class LoginService {
 	
-	@Autowired
-	UserDaoImp ud;
+	UserDao ud = new UserDaoImp();
 	
 	//Validate a users login information
 	public User validateLogin(String email, String password) {
