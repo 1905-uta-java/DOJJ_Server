@@ -20,9 +20,8 @@ public class LoginController {
 	//Mapping for Post
 	@PostMapping
 	@ResponseBody
-	public String login(@RequestBody User u) {
-		ls.validateLogin(u.getEmail(), u.getPassword());
-		return "Reveiw Successfully Added";
+	public User login(@RequestBody User u) {
+		return ls.validateLogin(u.getEmail(), u.getPassword());
 	}
 
 }
