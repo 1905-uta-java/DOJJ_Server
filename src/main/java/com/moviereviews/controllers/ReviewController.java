@@ -13,27 +13,27 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.moviereviews.models.Reviews;
-import com.moviereviews.services.ReviewsService;
+import com.moviereviews.models.Review;
+import com.moviereviews.services.ReviewService;
 
 @Controller
-@RequestMapping("/reviews")
-public class ReviewsController {
+@RequestMapping("/review")
+public class ReviewController {
 	
 	@Autowired
-	private ReviewsService rs;
+	private ReviewService rs;
 	
 	//Mapping for Get by Id
 	@GetMapping("/{id}")
 	@ResponseBody
-	public List<Reviews> getReviewsByMovieId(@PathVariable("id") int mId) {
+	public List<Review> getReviewsByMovieId(@PathVariable("id") int mId) {
 		return rs.getByMovieId(mId);
 	}
 	
 	//Mapping for Post
 	@PostMapping
 	@ResponseBody
-	public String addReview(@RequestBody Reviews r) {
+	public String addReview(@RequestBody Review r) {
 		rs.create(r);
 		return "Reveiw Successfully Added";
 	}
@@ -41,7 +41,7 @@ public class ReviewsController {
 	//Mapping for Put
 	@PutMapping
 	@ResponseBody
-	public String updateReview(@RequestBody Reviews r) {
+	public String updateReview(@RequestBody Review r) {
 		rs.update(r);
 		return "Review Successfully Updated";
 	}
