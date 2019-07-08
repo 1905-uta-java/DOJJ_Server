@@ -61,11 +61,11 @@ public class Review implements Serializable{
 		this.id = id;
 	}
 
-	public String getUserEmail() {
+	public String getUsername() {
 		return username;
 	}
 
-	public void setUserEmail(String username) {
+	public void setUsername(String username) {
 		this.username = username;
 	}
 
