@@ -2,6 +2,8 @@ package com.moviereviews.controllers;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -32,8 +34,10 @@ public class ReviewController {
 	
 	//Mapping for Post
 	@PostMapping
-	public int addReview(@RequestBody Review r) {
-		return rs.create(r);
+	public String addReview(@RequestBody Review r, HttpServletResponse response) {
+		rs.create(r);
+		response.setStatus(201);
+		return "Created";
 	}
 	
 	//Mapping for Put
