@@ -35,7 +35,7 @@ public class UserDaoImp implements UserDao{
 	public User getUserByUsername(String un) {
 		Session s = HibernateUtil.getSession();
 		Query<User> que = s.createQuery("from User where username=:un", User.class);
-		que.setParameter("username", un);
+		que.setParameter("un", un);
 		List<User> revs = que.list();
 		s.close();
 		return revs.get(0);
