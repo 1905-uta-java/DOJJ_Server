@@ -21,7 +21,7 @@ public class LoginController {
 	@PostMapping
 	@ResponseBody
 	public User login(@RequestBody User u) {
-		return ls.validateLogin(u.getUsername(), u.getPassword());
+		return ls.validateLogin(u.getEmail(), u.getPassword());
 	}
 
 }
