@@ -22,10 +22,10 @@ public class UserController {
 	private UserService us;
 	
 	//Mapping for Get by Email
-	@GetMapping("/{email}")
+	@GetMapping("/{username}")
 	@ResponseBody
-	public User getUserByEmail(@PathVariable("email") String em) {
-		return us.getByEmail(em);
+	public User getUserByEmail(@PathVariable("username") String un) {
+		return us.getByUsername(un);
 	}
 	
 	//Mapping for Post

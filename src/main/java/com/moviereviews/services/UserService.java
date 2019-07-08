@@ -11,10 +11,10 @@ public class UserService {
 	
 	UserDao ud = new UserDaoImp();
 	
-	//Get the User's information from their email
-	public User getByEmail(String email) {
-		//GET USER FROM DB WITH EMAIL
-		return ud.getUserByEmail(email);
+	//Get the User's information from their username
+	public User getByUsername(String username) {
+		//GET USER FROM DB WITH USERNAME
+		return ud.getUserByUsername(username);
 	}
 	
 	//Create a User

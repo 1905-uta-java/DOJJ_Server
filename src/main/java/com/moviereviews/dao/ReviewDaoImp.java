@@ -35,7 +35,7 @@ public class ReviewDaoImp implements ReviewDao {
 	@Override
 	public List<Review> getReviewsByMovie(int mId) {
 		Session s = HibernateUtil.getSession();
-		Query<Review> que = s.createQuery("from Review where movieid=:mId", Review.class);
+		Query<Review> que = s.createQuery("from Review where movieId=:mId", Review.class);
 		que.setParameter("mId", mId);
 		List<Review> revs = que.list();
 		s.close();
