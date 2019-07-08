@@ -24,7 +24,9 @@ public class Review implements Serializable{
 	@Column(name="REVIEW_ID", nullable=false)
 	private int id;
 	
-	@Column(name="USERNAME")
+	@Transient
+	@ManyToOne
+	@JoinColumn(name="username", nullable=false)
 	private String username;
 	@Column(name="REVIEW_CONTENT")
 	private String reviewContent;

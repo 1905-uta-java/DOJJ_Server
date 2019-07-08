@@ -32,20 +32,26 @@ public class ReviewController {
 	
 	//Mapping for Post
 	@PostMapping
-	public int addReview(@RequestBody Review r) {
-		return rs.create(r);
+	@ResponseBody
+	public String addReview(@RequestBody Review r) {
+		rs.create(r);
+		return "Reveiw Successfully Added";
 	}
 	
 	//Mapping for Put
 	@PutMapping
-	public int updateReview(@RequestBody Review r) {
-		return rs.update(r);
+	@ResponseBody
+	public String updateReview(@RequestBody Review r) {
+		rs.update(r);
+		return "Review Successfully Updated";
 	}
 	
 	//Mapping for Delete By Id
 	@DeleteMapping("/{id}")
-	public int deleteReview(@PathVariable("id") int id) {
-		return rs.delete(id);
+	@ResponseBody
+	public String deleteReview(@PathVariable("id") int id) {
+		rs.delete(id);
+		return "Review Successfully Delete";
 	}
 
 }
