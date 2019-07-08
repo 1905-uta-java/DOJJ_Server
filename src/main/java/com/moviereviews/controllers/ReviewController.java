@@ -32,9 +32,8 @@ public class ReviewController {
 	
 	//Mapping for Post
 	@PostMapping
-	public String addReview(@RequestBody Review r) {
+	public void addReview(@RequestBody Review r) {
 		rs.create(r);
-		return "Reveiw Successfully Added";
 	}
 	
 	//Mapping for Put
