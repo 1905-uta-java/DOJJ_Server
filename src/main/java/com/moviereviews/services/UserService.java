@@ -30,9 +30,9 @@ public class UserService {
 	}
 	
 	//Delete a User
-	public int delete(String email) {
+	public int delete(String username) {
 		//DELETE A USER IN DB
-		return ud.deleteUser(email);
+		return ud.deleteUser(username);
 	}
 	
 }

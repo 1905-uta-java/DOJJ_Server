@@ -21,10 +21,10 @@ public class UserController {
 	@Autowired
 	private UserService us;
 	
-	//Mapping for Get by Email
+	//Mapping for Get by Username
 	@GetMapping("/{username}")
 	@ResponseBody
-	public User getUserByEmail(@PathVariable("username") String un) {
+	public User getUserByUsername(@PathVariable("username") String un) {
 		return us.getByUsername(un);
 	}
 	
@@ -45,9 +45,9 @@ public class UserController {
 	}
 	
 	//Mapping for Delete
-	@DeleteMapping("/{email}")
+	@DeleteMapping("/{username}")
 	@ResponseBody
-	public String deleteUser(@PathVariable("email") String em) {
+	public String deleteUser(@PathVariable("username") String em) {
 		us.delete(em);
 		return "User Successfully Delete";
 	}
