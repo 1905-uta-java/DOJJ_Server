@@ -38,7 +38,6 @@ public class ReviewController {
 	public String addReview(@RequestBody Review r, HttpServletResponse response) {
 		rs.create(r);
 		response.setStatus(201);
-		response.setHeader("","");
 		return "Created";
 	}
 	
