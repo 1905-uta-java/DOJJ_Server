@@ -21,7 +21,6 @@ public class Review implements Serializable{
 	@Column(name="REVIEW_ID", nullable=false)
 	private int id;
 	
-	@Column(name="USER_NAME")
 	private String username;
 	@Column(name="REVIEW_CONTENT")
 	private String reviewContent;

@@ -1,8 +1,8 @@
 package com.moviereviews.util;
 
-import com.moviereviews.dao.UserDao;
-import com.moviereviews.dao.UserDaoImp;
-import com.moviereviews.models.User;
+import com.moviereviews.dao.ReviewDao;
+import com.moviereviews.dao.ReviewDaoImp;
+import com.moviereviews.models.Review;
 
 public class DriverUtil {
 
@@ -12,9 +12,7 @@ public class DriverUtil {
 	 */
 	
 	public static void main(String[] args) {
-		User u = new User("steveMan@gmail.com", "steve49Man", "test4pass", 0, "02");
-		UserDao uDao = new UserDaoImp();
-		//uDao.createUser(u); WORKS
+
 	}
 
 }
