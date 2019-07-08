@@ -34,6 +34,7 @@ public class ReviewController {
 	
 	//Mapping for Post
 	@PostMapping
+	@ResponseBody
 	public String addReview(@RequestBody Review r, HttpServletResponse response) {
 		rs.create(r);
 		response.setStatus(201);
