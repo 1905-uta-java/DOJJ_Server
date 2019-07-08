@@ -32,11 +32,13 @@ public class UserDaoImp implements UserDao{
 
 	// Get a specific user by their username
 	@Override
-	public User getUserByUsername(String username) {
+	public User getUserByUsername(String un) {
 		Session s = HibernateUtil.getSession();
-		User u = s.get(User.class, username);
+		Query<User> que = s.createQuery("from User where username=:un", User.class);
+		que.setParameter("username", un);
+		List<User> revs = que.list();
 		s.close();
-		return u;
+		return revs.get(0);
 	}
 
 	// Update the user in the database using new information
