@@ -12,11 +12,11 @@ public class LoginService {
 	UserDao ud = new UserDaoImp();
 	
 	//Validate a users login information
-	public User validateLogin(String email, String password) {
+	public User validateLogin(String username, String password) {
 		
-		//VALIDATE THAT PASSWORD AND EMAIL ARE NOT EMPTY/NULL
+		//VALIDATE THAT PASSWORD AND Username ARE NOT EMPTY/NULL
 		
-		 User u = ud.getUserByEmail(email);
+		 User u = ud.getUserByUsername(username);
 		 if(password.equals(u.getPassword())) {
 			 u.setPassword("");
 			 return u;
