@@ -1,0 +1,15 @@
+2019-07-09 14:31:56 INFO  Version:46 - HHH000412: Hibernate Core {5.3.7.Final}
+2019-07-09 14:31:56 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2019-07-09 14:31:57 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-07-09 14:31:57 WARN  pooling:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2019-07-09 14:31:57 INFO  pooling:129 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@java-may28.c56jx3cqfoqp.us-east-2.rds.amazonaws.com:1521:ORCL]
+2019-07-09 14:31:57 INFO  pooling:138 - HHH10001001: Connection properties: {user=admin, password=****}
+2019-07-09 14:31:57 INFO  pooling:143 - HHH10001003: Autocommit mode: false
+2019-07-09 14:31:57 INFO  DriverManagerConnectionProviderImpl:281 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2019-07-09 14:31:59 INFO  Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.Oracle12cDialect
+2019-07-09 14:31:59 INFO  BasicTypeRegistry:159 - HHH000270: Type registration [byte[]] overrides previous : org.hibernate.type.BinaryType@22875539
+2019-07-09 14:31:59 INFO  BasicTypeRegistry:159 - HHH000270: Type registration [[B] overrides previous : org.hibernate.type.BinaryType@22875539
+2019-07-09 14:31:59 INFO  BasicTypeRegistry:159 - HHH000270: Type registration [Byte[]] overrides previous : org.hibernate.type.WrapperBinaryType@2a448449
+2019-07-09 14:31:59 INFO  BasicTypeRegistry:159 - HHH000270: Type registration [[Ljava.lang.Byte;] overrides previous : org.hibernate.type.WrapperBinaryType@2a448449
+2019-07-09 14:32:00 INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@201aa8c1] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2019-07-09 14:32:02 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory

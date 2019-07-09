@@ -29,6 +29,7 @@ public class ReviewService {
 	//Update a reviews information/score
 	public int update(Review r) {
 		//UPDATE A REVIEW IN DB
+		System.out.println(r);
 		if(r.getUserScore() == 1) {
 			//Call increment id
 			rd.incReviewScore(r.getId());

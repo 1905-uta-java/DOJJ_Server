@@ -33,6 +33,7 @@ public class UserService {
 	//Update a User's information
 	public int update(User u) {
 		//UPDATE A USER IN DB
+		System.out.println(u);
 		if(u.getReputation() == 1) {
 			ud.incUserScore(u.getUsername());
 			return 0;

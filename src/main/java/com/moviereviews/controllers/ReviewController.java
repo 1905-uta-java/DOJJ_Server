@@ -45,7 +45,9 @@ public class ReviewController {
 	
 	//Mapping for Put
 	@PutMapping
+	@ResponseBody
 	public String updateReview(@RequestBody Review r) {
+		System.out.print("UPDATED REVIEW CALLED");
 		rs.update(r);
 		return "Review Successfully Updated";
 	}
