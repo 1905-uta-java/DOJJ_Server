@@ -8,7 +8,7 @@ public class LoginServiceTest {
 
 	@Test
 	public void testValidateLogin() {
-		fail("Not yet implemented");
+		
 	}
 
 }

@@ -29,9 +29,15 @@ public class ReviewService {
 	//Update a reviews information/score
 	public int update(Review r) {
 		//UPDATE A REVIEW IN DB
-		Review rev = rd.getReviewById(r.getId());
-		rev.setUserScore(rev.getUserScore() + r.getUserScore());
-		return rd.updateReview(rev);
+		if(r.getUserScore() == 1) {
+			//Call increment id
+			
+			return 0;
+		}else {
+			//Call decrement id
+			
+			return 0;
+		}
 	}
 	
 	//Delete a review by review id
