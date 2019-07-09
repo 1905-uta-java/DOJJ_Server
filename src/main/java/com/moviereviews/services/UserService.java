@@ -18,9 +18,16 @@ public class UserService {
 	}
 	
 	//Create a User
-	public void create(User u) {
-		//CREATE A NEW USER TO DB
-		ud.createUser(u);
+	public String create(User u) {
+		//Check if the user exists with the username
+		User existUser = getByUsername(u.getUsername());
+		if(u.getUsername().equals(existUser.getUsername())) {
+			return "Username already exists";
+		}else {
+			ud.createUser(u);
+			return "Account Created";
+		}
+		
 	}
 	
 	//Update a User's information

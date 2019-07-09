@@ -34,8 +34,7 @@ public class UserController {
 	@PostMapping
 	@ResponseBody
 	public String addUser(@RequestBody User u) {
-		us.create(u);
-		return "User Successfully Added";
+		return us.create(u);
 	}
 	
 	//Mapping for Put

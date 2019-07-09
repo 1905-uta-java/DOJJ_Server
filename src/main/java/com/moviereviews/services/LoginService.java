@@ -16,7 +16,6 @@ public class LoginService {
 		
 		//VALIDATE THAT PASSWORD AND EMAIL ARE NOT EMPTY/NULL
 		
-		
 		 User u = ud.getUserByEmail(email);
 		 if(password.equals(u.getPassword())) {
 			 u.setPassword("");
