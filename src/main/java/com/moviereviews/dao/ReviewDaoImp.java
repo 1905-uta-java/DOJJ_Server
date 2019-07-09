@@ -52,6 +52,15 @@ public class ReviewDaoImp implements ReviewDao {
 		s.close();
 		return revs;
 	}
+	
+	// Get all of the reviews created by the specified user
+	@Override
+	public Review getReviewById(int id) {
+		Session s = HibernateUtil.getSession();
+		Review r = s.get(Review.class, id);
+		s.close();
+		return r;
+	}
 
 	// Update the specified review with the given information
 	@Override

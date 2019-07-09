@@ -33,7 +33,9 @@ public class UserService {
 	//Update a User's information
 	public int update(User u) {
 		//UPDATE A USER IN DB
-		return ud.updateUser(u);
+		User user = ud.getUserByUsername(u.getUsername());
+		user.setReputation(user.getReputation() + u.getReputation());
+		return ud.updateUser(user);
 	}
 	
 	//Delete a User
