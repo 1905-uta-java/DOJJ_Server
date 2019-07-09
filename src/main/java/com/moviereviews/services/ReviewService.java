@@ -31,11 +31,11 @@ public class ReviewService {
 		//UPDATE A REVIEW IN DB
 		if(r.getUserScore() == 1) {
 			//Call increment id
-			
+			rd.incReviewScore(r.getId());
 			return 0;
 		}else {
 			//Call decrement id
-			
+			rd.decReviewScore(r.getId());
 			return 0;
 		}
 	}

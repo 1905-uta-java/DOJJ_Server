@@ -34,8 +34,10 @@ public class UserService {
 	public int update(User u) {
 		//UPDATE A USER IN DB
 		if(u.getReputation() == 1) {
+			ud.incUserScore(u.getUsername());
 			return 0;
 		}else {
+			ud.decUserScore(u.getUsername());
 			return 0;
 		}
 	}
