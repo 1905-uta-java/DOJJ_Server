@@ -86,4 +86,26 @@ public class ReviewDaoImp implements ReviewDao {
 		return 0;
 	}
 
+	@Override
+	public void incReviewScore(int id) {
+		Session s = HibernateUtil.getSession();
+		Transaction tran = s.beginTransaction();
+		Review r = s.get(Review.class, id);
+		r.setUserScore(r.getUserScore() + 1);
+		s.merge(r);
+		tran.commit();
+		s.close();
+	}
+
+	@Override
+	public void decReviewScore(int id) {
+		Session s = HibernateUtil.getSession();
+		Transaction tran = s.beginTransaction();
+		Review r = s.get(Review.class, id);
+		r.setUserScore(r.getUserScore() - 1);
+		s.merge(r);
+		tran.commit();
+		s.close();
+	}
+
 }

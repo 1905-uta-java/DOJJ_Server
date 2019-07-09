@@ -13,4 +13,6 @@ public interface ReviewDao {
 	public int updateReview(Review r);
 	public int createReview(Review r);
 	public int deleteReview(int id);
+	public void incReviewScore(int id);
+	public void decReviewScore(int id);
 }
