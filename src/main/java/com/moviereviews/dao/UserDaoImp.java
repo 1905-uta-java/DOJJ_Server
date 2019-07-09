@@ -74,4 +74,26 @@ public class UserDaoImp implements UserDao{
 		return 0;
 	}
 
+	@Override
+	public void incUserScore(String un) {
+		Session s = HibernateUtil.getSession();
+		Transaction tran = s.beginTransaction();
+		User u = this.getUserByUsername(un);
+		u.setReputation(u.getReputation() + 1);
+		s.merge(u);
+		tran.commit();
+		s.close();
+	}
+
+	@Override
+	public void decUserScore(String un) {
+		Session s = HibernateUtil.getSession();
+		Transaction tran = s.beginTransaction();
+		User u = this.getUserByUsername(un);
+		u.setReputation(u.getReputation() - 1);
+		s.merge(u);
+		tran.commit();
+		s.close();
+	}
+
 }
