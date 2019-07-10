@@ -21,18 +21,9 @@ public class UserService {
 	}
 	
 	//Create a User
-	public String create(User u) {
-		if(u == null) {
-			return "Failed";
-		}
-		//Check if the user exists with the username
-		User existUser = getByUsername(u.getUsername());
-		if(u.getUsername().equals(existUser.getUsername())) {
-			return "Username already exists";
-		}else {
-			ud.createUser(u);
-			return "Account Created";
-		}
+	public int create(User u) {
+		ud.createUser(u);
+		return 0;
 		
 	}
 	

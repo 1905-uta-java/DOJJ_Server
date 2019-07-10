@@ -35,7 +35,8 @@ public class UserController {
 	@CrossOrigin
 	@ResponseBody
 	public String addUser(@RequestBody User u) {
-		return us.create(u);
+		us.create(u);
+		return "Generated User";
 	}
 	
 	//Mapping for Put
