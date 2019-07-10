@@ -21,13 +21,18 @@ public class ReviewService {
 	
 	//Create a new review
 	public int create(Review r) {
-		
+		if(r == null) {
+			return -1;
+		}
 		//CREATE A NEW REVIEW TO DB
 		return rd.createReview(r);
 	}
 	
 	//Update a reviews information/score
 	public int update(Review r) {
+		if(r == null) {
+			return -1;
+		}
 		//UPDATE A REVIEW IN DB
 		System.out.println(r);
 		if(r.getUserScore() == 1) {

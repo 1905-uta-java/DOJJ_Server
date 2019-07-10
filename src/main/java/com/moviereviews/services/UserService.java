@@ -13,12 +13,18 @@ public class UserService {
 	
 	//Get the User's information from their username
 	public User getByUsername(String username) {
+		if(username == null || username == "") {
+			return new User();
+		}
 		//GET USER FROM DB WITH USERNAME
 		return ud.getUserByUsername(username);
 	}
 	
 	//Create a User
 	public String create(User u) {
+		if(u == null) {
+			return "Failed";
+		}
 		//Check if the user exists with the username
 		User existUser = getByUsername(u.getUsername());
 		if(u.getUsername().equals(existUser.getUsername())) {
@@ -32,8 +38,10 @@ public class UserService {
 	
 	//Update a User's information
 	public int update(User u) {
+		if(u == null) {
+			return -1;
+		}
 		//UPDATE A USER IN DB
-		System.out.println(u);
 		if(u.getReputation() == 1) {
 			ud.incUserScore(u.getUsername());
 			return 0;
@@ -45,6 +53,9 @@ public class UserService {
 	
 	//Delete a User
 	public int delete(String username) {
+		if(username == null || username == "") {
+			return -1;
+		}
 		//DELETE A USER IN DB
 		return ud.deleteUser(username);
 	}
