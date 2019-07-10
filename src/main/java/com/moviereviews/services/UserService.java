@@ -51,6 +51,24 @@ public class UserService {
 		}
 	}
 	
+	//Change user password
+	public int changePass(User u) {
+		User curUser = ud.getUserByUsername(u.getUsername());
+		curUser.setPassword(u.getPassword());
+		ud.updateUser(curUser);
+		return 0;
+	}
+	
+	//Validate password for change
+	public int validPass(User u) {
+		User curUser = ud.getUserByUsername(u.getUsername());
+		if(u.getPassword().equals(curUser.getPassword())) {
+			return 0;
+		}else {
+			return -1;
+		}
+	}
+	
 	//Delete a User
 	public int delete(String username) {
 		if(username == null || username == "") {

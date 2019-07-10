@@ -45,6 +45,32 @@ public class UserController {
 		return "User Successfully Updated";
 	}
 	
+	//Mapping for Put
+	@PutMapping("/password/change")
+	@ResponseBody
+	public String changePassword(@RequestBody User u) {
+		int status = us.changePass(u);
+		if(status == 0) {
+			return "Success";
+		}else {
+			return "Failed";
+		}
+		
+	}
+	
+	//Mapping for Put
+	@PutMapping("/password/valid")
+	@ResponseBody
+	public String validPassword(@RequestBody User u) {
+		int status = us.validPass(u);
+		if(status == 0) {
+			return "Valid";
+		}else {
+			return "Invalid";
+		}
+		
+	}
+	
 	//Mapping for Delete
 	@DeleteMapping("/{username}")
 	@CrossOrigin
