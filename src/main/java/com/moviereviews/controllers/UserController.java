@@ -25,7 +25,6 @@ public class UserController {
 	
 	//Mapping for Get by Username
 	@GetMapping("/{username}")
-	@CrossOrigin
 	@ResponseBody
 	public User getUserByUsername(@PathVariable("username") String un) {
 		return us.getByUsername(un);
@@ -42,7 +41,6 @@ public class UserController {
 	@PutMapping
 	@ResponseBody
 	public String updateUser(@RequestBody User u) {
-		System.out.print("UPDATED User CALLED");
 		us.update(u);
 		return "User Successfully Updated";
 	}
