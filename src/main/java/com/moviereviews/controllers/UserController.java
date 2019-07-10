@@ -46,7 +46,7 @@ public class UserController {
 	}
 	
 	//Mapping for Put
-	@PutMapping("/password/change")
+	@PutMapping("/change")
 	@ResponseBody
 	public String changePassword(@RequestBody User u) {
 		int status = us.changePass(u);
@@ -59,7 +59,7 @@ public class UserController {
 	}
 	
 	//Mapping for Put
-	@PutMapping("/password/valid")
+	@PutMapping("/valid")
 	@ResponseBody
 	public String validPassword(@RequestBody User u) {
 		int status = us.validPass(u);
