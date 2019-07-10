@@ -25,6 +25,7 @@ public class UserController {
 	
 	//Mapping for Get by Username
 	@GetMapping("/{username}")
+	@CrossOrigin
 	@ResponseBody
 	public User getUserByUsername(@PathVariable("username") String un) {
 		return us.getByUsername(un);
@@ -48,6 +49,7 @@ public class UserController {
 	
 	//Mapping for Delete
 	@DeleteMapping("/{username}")
+	@CrossOrigin
 	@ResponseBody
 	public String deleteUser(@PathVariable("username") String em) {
 		us.delete(em);

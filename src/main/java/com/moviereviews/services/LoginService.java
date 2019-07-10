@@ -15,14 +15,22 @@ public class LoginService {
 	public User validateLogin(String username, String password) {
 		
 		//VALIDATE THAT PASSWORD AND username ARE NOT EMPTY/NULL
+		if(username == null || username == "" || password == null || password == "") {
+			return new User();
+		}
+		
 		
 		 User u = ud.getUserByUsername(username);
-		 if(password.equals(u.getPassword())) {
-			 u.setPassword("");
-			 return u;
-		 }else {
-			 return new User();
+		 if(u != null) {
+			 if(password.equals(u.getPassword())) {
+				 u.setPassword("");
+			 	return u;
+			 }else {
+				 return new User();
+			 }
 		 }
+		 return new User();
+		 
 	}
 	
 	
