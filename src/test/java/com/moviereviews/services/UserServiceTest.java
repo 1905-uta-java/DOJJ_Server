@@ -1,8 +1,10 @@
 package com.moviereviews.services;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
+
+import com.moviereviews.models.User;
 
 public class UserServiceTest {
 	
@@ -10,8 +12,8 @@ public class UserServiceTest {
 
 	@Test
 	public void testGetByUsername() {
-		assertEquals(-1, us.getByUsername(null));
-		assertEquals(-1, us.getByUsername(""));
+		assertEquals(new User(), us.getByUsername(null));
+		assertEquals(new User(), us.getByUsername(""));
 	}
 
 	@Test
