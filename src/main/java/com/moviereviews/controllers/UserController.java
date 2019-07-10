@@ -32,6 +32,7 @@ public class UserController {
 	
 	//Mapping for Post
 	@PostMapping
+	@CrossOrigin
 	@ResponseBody
 	public String addUser(@RequestBody User u) {
 		return us.create(u);
@@ -39,6 +40,7 @@ public class UserController {
 	
 	//Mapping for Put
 	@PutMapping
+	@CrossOrigin
 	@ResponseBody
 	public String updateUser(@RequestBody User u) {
 		us.update(u);
@@ -47,6 +49,7 @@ public class UserController {
 	
 	//Mapping for Put
 	@PutMapping("/change")
+	@CrossOrigin
 	@ResponseBody
 	public String changePassword(@RequestBody User u) {
 		int status = us.changePass(u);
@@ -60,6 +63,7 @@ public class UserController {
 	
 	//Mapping for Put
 	@PutMapping("/valid")
+	@CrossOrigin
 	@ResponseBody
 	public String validPassword(@RequestBody User u) {
 		int status = us.validPass(u);
