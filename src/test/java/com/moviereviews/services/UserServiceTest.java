@@ -17,11 +17,6 @@ public class UserServiceTest {
 	}
 
 	@Test
-	public void testCreate() {
-		assertEquals(-1, us.create(null));
-	}
-
-	@Test
 	public void testUpdate() {
 		assertEquals(-1, us.update(null));
 	}
